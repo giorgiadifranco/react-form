@@ -45,7 +45,7 @@ function App() {
   return (
     <>
       <div className='container'>
-      <h2>Your Article</h2>
+      <h2>Your Articles</h2>
 
       
         <form onSubmit={addTitle}>
