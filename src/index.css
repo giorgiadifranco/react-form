@@ -3,3 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: rgb(235, 233, 231);
+}
+
+.container{
+  
+  align-items: center;
+  width: 80%;
+  padding-left: 10%;
+}
+.mb-3{
+
+  padding-top: 1.5rem;
+}
+
+.list-group-item{
+  width: 60%;
+  margin-top: 1.5rem;
+
+  padding:1rem;
+  border: 1px solid rgb(112, 110, 110);
+  border-radius: 10px;
+  list-style: none;
+  background-color: rgb(216, 214, 211);
+  box-shadow: 10px 10px 5px #dedede;
+}
+.list-titles{
+
+  padding-top: 1.5rem;
+}
+
+.bi-trash3-fill{
+  padding: 0.5rem;
+}
+

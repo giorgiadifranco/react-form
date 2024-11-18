@@ -4,7 +4,7 @@ import './App.css'
 
 const articles = [
 
-  ' '
+  
 
 ]
 
@@ -27,6 +27,21 @@ function App() {
     
   }
 
+  function handleTrashBtn(e){
+   console.log(e.target);
+   const titleIndexToTrash = Number(e.target.getAttribute('data-index'))
+
+   console.log(titles, titleIndexToTrash);
+
+   const newTitles = titles.filter((title, index) => index != titleIndexToTrash)
+   console.log(newTitles);
+
+   setTitles(newTitles)
+   
+   
+   
+  }
+
   return (
     <>
       <div className='container'>
@@ -35,7 +50,7 @@ function App() {
       
         <form onSubmit={addTitle}>
           <div className='mb-3'>
-            <label htmlFor='task' className='form-label'>Title</label>
+            <label htmlFor='task' className='form-label'>Insert Title</label>
           </div>
 
           <div className="input-group mb-3">
@@ -45,9 +60,17 @@ function App() {
           </div>
 
         </form>
-
+        <p className="list-titles">List titles</p>
         <ul className="list-group">
-                {titles.map((title, index)=> <li key={index} className='list-group-item'>{title} 
+                {titles.map((title, index)=> <li key={index} className='list-group-item'>{title} <button
+                className="btn btn-sm btn-danger"
+                data-index={index}
+                
+                onClick={handleTrashBtn}
+              >
+                <i class="bi bi-trash3-fill"></i>
+              </button>
+
               </li>)} 
         </ul>   
       </div>
