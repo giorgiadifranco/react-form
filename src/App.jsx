@@ -56,7 +56,7 @@ function App() {
           <div className="input-group mb-3">
             <input type="text" className="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2" value={newTitle}
             onChange={e=> setNewTitle(e.target.value)}/>
-            <button className="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            <button className="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
           </div>
 
         </form>
@@ -68,7 +68,7 @@ function App() {
                 
                 onClick={handleTrashBtn}
               >
-                <i class="bi bi-trash3-fill"></i>
+                <i class="bi bi-trash3-fill "></i>
               </button>
 
               </li>)} 
